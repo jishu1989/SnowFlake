@@ -1,0 +1,11 @@
+﻿//LOAD - our target table is the food group table which we load using the insert command
+INSERT INTO "USDA_NUTRIENT_STDREF"."PUBLIC"."FD_GROUP"
+
+SELECT
+//TRANSFORM - we clean up the data by replacing the tildes in both fields
+REPLACE(fdgrp_cd,'~','') as fdgrp_cd,
+REPLACE(fdgrp_desc,'~','') as fdgrp_desc
+//EXTRACT - source table is the food group ingest table
+FROM "USDA_NUTRIENT_STDREF"."PUBLIC"."FD_GROUP_INGEST";
+
+

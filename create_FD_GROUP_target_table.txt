@@ -1,0 +1,5 @@
+﻿Create table "USDA_NUTRIENT_STDREF"."PUBLIC"."FD_GROUP"
+(
+  fdgrp_cd varchar(4)
+ ,fdgrp_desc varchar(60)
+);

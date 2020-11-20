@@ -1,0 +1,18 @@
+USE DATABASE LIBRARY_CARD_CATALOG;
+
+// Create the relationships table
+// this is sometimes called a "Many-to-Many table"
+CREATE TABLE BOOK_TO_AUTHOR
+(  BOOK_UID NUMBER
+  ,AUTHOR_UID NUMBER
+);
+
+//Insert rows of the known relationships
+INSERT INTO BOOK_TO_AUTHOR(BOOK_UID,AUTHOR_UID)
+VALUES
+ (1,1) // This row links the 2001 book to Fiona Macdonald
+,(1,2) // This row links the 2001 book to Gian Paulo Faleschini
+,(2,3) // Links 2006 book to Laura K Egendorf
+,(3,4) // Links 2008 book to Jan Grover
+,(4,5) // Links 2016 book to Jennifer Clapp
+,(5,6);// Links 2015 book to Kathleen Petelinsek
